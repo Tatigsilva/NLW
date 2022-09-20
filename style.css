@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    display: flex; 
+    gap: 16px;  
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+body{
+    background-image: url(./background.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body *{
+    font-family: 'inter', sans-serif;
+}
+
+header {
+    text-align: center;  
+    height: calc(120px + 32px);
+}
+
+.avatar img:hover{
+    transform: scale(1.1)
+}
+
+.avatar img{
+    width: 120px;
+    border-radius: 50%;
+    margin-top: 32px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding: 4px;  
+    transition: transform .3s;
+
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display:flex;
+    flex-direction: column;
+    gap: 24px;
+  
+}
+
+section{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+.content{
+    background: #2A2634;
+    border-radius: 8px;
+    width: 580px;
+    padding: 24px 24px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: -0.47px;
+    color: white;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+.games-list img{
+    border-radius: 8px;
+    width: 90px;
+    transition: transform .3s;
+    
+}
+
+.games-list img:hover{
+    transform: scale(1.1);
+}
+
+.channel-list img {
+    width: 70px;
+    border: 1px solid #443E54; 
+    border-radius: 999px;
+    transition: transform .3s;
+}
+
+.channel-list img:hover{
+    transform: scale(1.1);
+}
+
+.networks-list svg {
+    width: 33px;
+    transition: transform .3s;
+    
+}
+
+.networks-list svg:hover{
+    transform: scale(1.1);
+}
+
+
+/*ANIAMTION */
+
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.avatar img {
+    animation: fromtop .7s backwards;
+    animation-delay: .2s ;
+}
+
+
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+main section {
+    animation: frombottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+
+main section:nth-child(3){
+    animation-delay: .8s;
+}
